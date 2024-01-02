@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@1,900&display=swap');
+
+.main-div{
+    padding-top: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.main-div-img {
+    width: 25%;
+    height: 25%;
+}
+
+.main-div-bttn {
+    font-family: 'Urbanist', sans-serif;  
+    background-color: rgb(0, 102, 0);
+    border: none;
+    border-radius: 7px;
+    padding: 8px;
+    width: 13%;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.main-div-bttn:after {
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.main-div-bttn:hover {
+    transform:scale(1.25,1.25);
+    background-color: rgb(0, 0, 0);
+}
+
