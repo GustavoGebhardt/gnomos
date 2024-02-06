@@ -3,10 +3,10 @@ function iniciar(){
 }
 
 function jogar(){
-    location.href = "../fase1/";
+    location.href = "../-1381025499/";
 }
 
-let val = ["2054844561","3982157412","5296874301", "1273968536"
+var val = ["2054844561","3982157412","5296874301", "-1041509950"
 , "1273968536", "1457028369", "4736192850", "9260481573"
 , "3105726849", "8659243017", "2471865309", "6109532478"
 , "4837952106", "2591078346", "1745038269", "6953178402"
@@ -24,23 +24,55 @@ let val = ["2054844561","3982157412","5296874301", "1273968536"
 , "3852106974", "6198047532", "2471089653", "5738964210"
 , "8946571203", "3105796824", "4653872910", "1825364709"
 , "9350742861", "7013849256", "2984637150", "8107253496"
-, "5264930178", "4672895013", "6317508429",]
+, "5264930178", "4672895013", "6317508429",
+]
+
+var valV2 = [
+    "brasil", "estadosunidos", "china",
+    "russia", "india", "japão",
+    "canada", "australia", "alemanha",
+    "franca", "reinounido", "italia",
+    "espanha", "mexico", "argentina",
+    "africadoSul", "nigéria", "egito",
+    "turquia", "coreiadosul", "indonésia",
+    "inglatera", "chile", "suíça", "suécia"
+]
 
 function proximo(){
     var resposta = document.getElementById('resposta').value;
+    
+    var id = document.getElementById('fase');
+    var idString = id.innerHTML;
+    var idInt = parseInt(idString.slice(5,6)) 
+
+    console.log(idInt);
+    console.log(((idInt-1)*3))
     /*
-    for(i = 0; i <= val.length; i = i+3){
-        console.log(i)
+    if(val[((idInt-1)*3)] == resposta.hashCode()){
+        location.href = "/src/fase" + (idInt+1);
+    }
+    else{
+        alert("Resposta Invalida!")
     }
     */
-    //console.log(resposta.hashCode())
 
+    if(val[((idInt-1)*3)] == resposta.hashCode()){
+        console.log(idInt)
+        location.href = "/src/" + valV2[idInt].hashCode();
+    }
+    else{
+        alert("Resposta Invalida!")
+    }
+
+    //console.log(resposta.hashCode())
+    /*
     if(resposta.hashCode() == val[0]){
         location.href = "/src/fase2";
     } 
     else{
         alert("Resposta Invalida!")
     }
+    */
 }
 
 //----------------------------------------------------------
@@ -56,10 +88,12 @@ String.prototype.hashCode = function(){
     }
     return hash
 }
+
 /*
-const str = 'aprimeiravez'
+const str = 'quepelovisto'
 console.log(str, str.hashCode())
 */
+
 //----------------------------------------------------------
 
 document.addEventListener('DOMContentLoaded', function() {
