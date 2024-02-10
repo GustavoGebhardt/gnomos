@@ -1,9 +1,9 @@
-brasil -1381025499
-estadosunidos 480542821
-china 94631255
-russia -919652293
-india 100346167
-japão 100897733
+brasil -1381025499 -
+estadosunidos 480542821 -
+china 94631255 -
+russia -919652293 -
+india 100346167 -
+japão 100897733 -
 canada -1367726386
 australia 933923200
 alemanha 1610234489
